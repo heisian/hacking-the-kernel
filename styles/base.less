@@ -1,0 +1,324 @@
+@import "syntax-variables";
+
+atom-text-editor, :host {
+  background: radial-gradient(ellipse at center, #000000 0%,#001500 90%);
+  color: @syntax-text-color;
+  text-shadow: 0px 0px 10px rgba(90,255,90,0.5);
+
+  .wrap-guide {
+    background-color: @syntax-wrap-guide-color;
+  }
+
+  .indent-guide {
+    color: @syntax-indent-guide-color;
+  }
+
+  .invisible-character {
+    color: @syntax-invisible-character-color;
+  }
+
+  .gutter {
+    background-color: @syntax-gutter-background-color;
+    color: @syntax-gutter-text-color;
+
+    .line-number {
+      &.cursor-line {
+        background-color: @syntax-gutter-background-color-selected;
+        color: @syntax-gutter-text-color-selected;
+		text-shadow: 0px 0px 5px rgba(0,255,0,0.5);
+      }
+
+      &.cursor-line-no-selection {
+        color: @syntax-gutter-text-color-selected;
+      }
+    }
+  }
+
+  .gutter .line-number.folded,
+  .gutter .line-number:after,
+  .fold-marker:after {
+    color: @black-green;
+  }
+
+  .invisible {
+    color: @syntax-text-color;
+  }
+
+  .cursor {
+    color: @syntax-cursor-color;
+  }
+
+  .selection .region {
+    background-color: @syntax-selection-color;
+  }
+}
+
+atom-text-editor .search-results .marker .region,
+:host .search-results .marker .region {
+  background-color: transparent;
+  border: 1px solid @syntax-result-marker-color;
+}
+
+atom-text-editor .search-results .marker.current-result .region,
+:host .search-results .marker.current-result .region {
+  border: 1px solid @syntax-result-marker-color-selected;
+}
+
+.comment {
+  color: @dark-green;
+}
+
+.entity {
+  &.name.type {
+    color: @bright-green;
+    text-decoration: underline;
+  }
+
+  &.other.inherited-class {
+    color: @green;
+  }
+}
+
+.keyword {
+  color: @blue-green;
+  text-shadow: 0px 0px 5px rgba(0,255,193,0.5);
+
+  &.control {
+    color: @green;
+  }
+
+  &.operator {
+    color: @medium-green;
+  }
+
+  &.other.special-method {
+    color: @green;
+  }
+
+  &.other.unit {
+    color: @green;
+  }
+}
+
+.storage {
+  color: @sea-green;
+}
+
+.constant {
+  color: @sea-green;
+
+  &.character.escape {
+    color: @yellow-green;
+  }
+
+  &.numeric {
+    color: @sea-green;
+  }
+
+  &.other.color {
+    color: @blue-green;
+  }
+
+  &.other.symbol {
+    color: @blue-green;
+  }
+}
+
+.variable {
+  color: @variable-green;
+  border-bottom: 1px dashed @very-dark-green;
+
+  &.interpolation {
+    color: darken(@green, 10%);
+  }
+
+  &.parameter.function {
+    color: @syntax-text-color;
+  }
+}
+
+.invalid.illegal {
+  background-color: @red;
+  color: @syntax-background-color;
+}
+
+.string {
+  color: @yellow-green;
+  text-shadow: 0px 5px 5px rgba(100,255,100,0.2);
+
+
+  &.regexp {
+    color: @yellow-green;
+
+    .source.ruby.embedded {
+      color: @yellow-green;
+    }
+  }
+
+  &.other.link {
+    color: @yellow-green;
+  }
+}
+
+.punctuation {
+  &.definition {
+    &.comment {
+      color: @dark-green;
+    }
+
+    &.string,
+    &.variable,
+    &.parameters,
+    &.array {
+      color: @syntax-text-color;
+    }
+
+    &.heading,
+    &.identity {
+      color: @light-green;
+    }
+
+    &.bold {
+      color: @green;
+      font-weight: bold;
+    }
+
+    &.italic {
+      color: @green;
+      font-style: italic;
+    }
+  }
+
+  &.section.embedded {
+    color: darken(@green, 10%);
+  }
+
+}
+
+.support {
+  &.class {
+    color: @bright-green;
+	text-shadow: 0px 0px 7px rgba(150, 255, 150, 1);
+  }
+
+  &.function  {
+	color: @bright-green;
+	text-shadow: 0px 0px 7px rgba(150, 255, 150, 1);
+
+
+    &.any-method {
+		color: @bright-green;
+		text-shadow: 0px 0px 7px rgba(150, 255, 150, 1);
+    }
+  }
+}
+
+.entity {
+  &.name.function {
+    color: @light-green;
+  }
+
+  &.name.class, &.name.type.class {
+    color: @light-green;
+  }
+
+  &.name.section {
+    color: @light-green;
+  }
+
+  &.name.tag {
+    color: @light-green;
+    text-decoration: underline;
+  }
+
+  &.other.attribute-name {
+    color: @attribute-green;
+
+    &.id {
+      color: @light-green;
+    }
+  }
+}
+
+.meta {
+  &.class {
+    color: @attribute-green;
+  }
+
+  &.link {
+    color: @attribute-green;
+  }
+
+  &.require {
+    color: @attribute-green;
+  }
+
+  &.selector {
+    color: @attribute-green;
+  }
+
+  &.separator {
+    background-color: @black;
+    color: @syntax-text-color;
+  }
+
+  &.function-call {
+	color: @blue-green;
+  }
+}
+
+.none {
+  color: @syntax-text-color;
+}
+
+.markup {
+  &.bold {
+    color: @attribute-green;
+    font-weight: bold;
+  }
+
+  &.changed {
+    color: @bright-green;
+  }
+
+  &.deleted {
+    color: @medium-green;
+  }
+
+  &.italic {
+    color: @green;
+    font-style: italic;
+  }
+
+  &.heading .punctuation.definition.heading {
+    color: @bright-green;
+  }
+
+  &.inserted {
+    color: @light-green;
+  }
+
+  &.list {
+    color: @green;
+  }
+
+  &.quote {
+    color: @medium-green;
+  }
+
+  &.raw.inline {
+    color: @medium-green;
+  }
+}
+
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+  &.heading {
+    color: @bright-green;
+  }
+}
+
+atom-text-editor[mini] .scroll-view,
+:host([mini]) .scroll-view {
+  padding-left: 1px;
+}
