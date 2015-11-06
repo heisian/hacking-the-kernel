@@ -1,9 +1,9 @@
 @import "syntax-variables";
 
 atom-text-editor, :host {
-  background: radial-gradient(ellipse at center, #000000 0%,#001500 90%);
+  background: radial-gradient(ellipse at center, #000000 0%,#001000 90%);
   color: @syntax-text-color;
-  text-shadow: 0px 0px 10px rgba(90,255,90,0.5);
+  //text-shadow: 0px 0px 10px rgba(90,255,90,0.5);
 
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
@@ -198,17 +198,17 @@ atom-text-editor .search-results .marker.current-result .region,
 .support {
   &.class {
     color: @bright-green;
-	text-shadow: 0px 0px 7px rgba(150, 255, 150, 1);
+	font-weight: 400;
+	text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.8);
   }
 
   &.function  {
 	color: @bright-green;
-	text-shadow: 0px 0px 7px rgba(150, 255, 150, 1);
-
+	text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.8);
 
     &.any-method {
 		color: @bright-green;
-		text-shadow: 0px 0px 7px rgba(150, 255, 150, 1);
+		text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.8);
     }
   }
 }
