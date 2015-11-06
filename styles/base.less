@@ -3,7 +3,6 @@
 atom-text-editor, :host {
   background: radial-gradient(ellipse at center, #000000 0%,#001000 90%);
   color: @syntax-text-color;
-  //text-shadow: 0px 0px 10px rgba(90,255,90,0.5);
 
   .wrap-guide {
     background-color: @syntax-wrap-guide-color;
@@ -50,13 +49,25 @@ atom-text-editor, :host {
 
   .selection .region {
     background-color: @syntax-selection-color;
+	background: repeating-linear-gradient(0deg, @black, @black 1px, @syntax-selection-color 2px, @syntax-selection-color 1px);
+	border-right: 2px solid darken(@dark-green,5%);
+	border-left: 2px solid darken(@dark-green,5%);
   }
 }
 
 atom-text-editor .search-results .marker .region,
 :host .search-results .marker .region {
   background-color: transparent;
-  border: 1px solid @syntax-result-marker-color;
+  border: 1px solid @syntax-result-marker-color !important;
+}
+
+atom-text-editor::shadow {
+    .find-result .region {
+		background-color: transparent;
+        border: none;
+		outline: 1px solid @syntax-result-marker-color;
+		outline-offset: 1px;
+    }
 }
 
 atom-text-editor .search-results .marker.current-result .region,
@@ -89,8 +100,26 @@ atom-text-editor .search-results .marker.current-result .region,
   }
 
   &.operator {
-    color: @medium-green;
+    color: @attribute-green;
   }
+  	&.key {
+		color: @operator-green;
+	}
+	&.class {
+		color: @class-green;
+	}
+	&.assignment {
+		color: @special-green;
+		text-shadow: 0px 0px 10px rgba(100,255,100,1);
+	}
+	&.comparison {
+		color: @special-green;
+		text-shadow: 0px 0px 10px rgba(100,255,100,1);
+	}
+	&.logical {
+		color: @special-green;
+		text-shadow: 0px 0px 10px rgba(100,255,100,1);
+	}
 
   &.other.special-method {
     color: @green;
@@ -200,16 +229,16 @@ atom-text-editor .search-results .marker.current-result .region,
   &.class {
     color: @bright-green;
 	font-weight: 400;
-	text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.8);
+	text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.7);
   }
 
   &.function  {
 	color: @bright-green;
-	text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.8);
+	text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.7);
 
     &.any-method {
 		color: @bright-green;
-		text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.8);
+		text-shadow: 0px 0px 7px rgba(150, 255, 150, 0.7);
     }
   }
 }
@@ -322,4 +351,5 @@ atom-text-editor .search-results .marker.current-result .region,
 atom-text-editor[mini] .scroll-view,
 :host([mini]) .scroll-view {
   padding-left: 1px;
+  background-color: @black;
 }
