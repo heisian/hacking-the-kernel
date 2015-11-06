@@ -2,12 +2,18 @@
   "name": "hacking-the-kernel",
   "theme": "syntax",
   "version": "0.0.0",
-  "description": "A short description of your syntax theme",
+  "description": "A theme for your late-night coding sessions.",
   "keywords": [
     "syntax",
-    "theme"
+    "theme",
+    "dark",
+    "green",
+    "matrix",
+    "night",
+    "black",
+    "hack"
   ],
-  "repository": "https://github.com/atom/hacking-the-kernel",
+  "repository": "https://github.com/heisian/hacking-the-kernel",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
