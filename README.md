@@ -1,6 +1,6 @@
-# hacking-the-kernel theme
+# Hacking the Kernel Atom Syntax Theme
 
-A black & green Atom syntax theme for your late-night coding sessions...
+A black & green theme for your late-night coding sessions...
 
 Satiate your old-school CRT nostalgia!
 
