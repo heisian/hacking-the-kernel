@@ -2,16 +2,13 @@
   "name": "hacking-the-kernel",
   "theme": "syntax",
   "version": "1.2.1",
-  "description": "A theme for your late-night coding sessions.",
+  "description": "A syntax theme for your UI theme for your late-night coding sessions.",
   "keywords": [
     "syntax",
     "theme",
     "dark",
     "green",
-    "matrix",
-    "night",
-    "black",
-    "hack"
+    "matrix"
   ],
   "repository": "https://github.com/heisian/hacking-the-kernel",
   "license": "MIT",
