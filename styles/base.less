@@ -1,5 +1,20 @@
 @import "syntax-variables";
 
+atom-text-editor {
+    font-family: monospace;
+}
+
+// for if/foreach/try/catch blocks {}
+.control-structure-class {
+    color: @black;
+    font-weight: bold;
+    padding: 0px 2px 0px 2px;
+    margin: 0px -2px 0px 2px;
+    background: @dark-green;
+    border-radius: 2px;
+    text-shadow: none;
+}
+
 atom-text-editor, :host {
   background: radial-gradient(ellipse at center, #000000 0%,#001000 90%);
   color: @syntax-text-color;
@@ -95,7 +110,7 @@ atom-text-editor .search-results .marker.current-result .region,
   text-shadow: 0px 0px 5px rgba(0,255,193,0.5);
 
   &.control {
-    color: @green;
+    .control-structure-class();
   }
 
   &.operator {
@@ -222,6 +237,14 @@ atom-text-editor .search-results .marker.current-result .region,
     color: darken(@green, 10%);
   }
 
+
+}
+
+span.punctuation.section.scope.begin {
+    color: @medium-green;
+}
+span.punctuation.section.scope.end {
+    color: @medium-green;
 }
 
 .support {
