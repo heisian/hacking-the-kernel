@@ -2,17 +2,17 @@
 
 // for if/foreach/try/catch blocks {}
 .control-structure-class {
-    color: @black;
-    font-weight: bold;
+    color: @green;
+    font-weight: 400;
     padding: 0px 2px 0px 2px;
     margin: 0px -2px 0px -2px;
-    background: @dark-green;
+    background: darken(@dark-green, 30%);
     border-radius: 2px;
     text-shadow: none;
 }
 
 atom-text-editor {
-  background: radial-gradient(ellipse at center, #000000 0%,#001000 90%);
+  font-weight: 200;
   color: @syntax-text-color;
 
   .wrap-guide {
@@ -28,7 +28,6 @@ atom-text-editor {
   }
 
   .gutter {
-    background-color: @syntax-gutter-background-color;
     color: @syntax-gutter-text-color;
 
     .line-number {
